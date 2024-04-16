@@ -56,7 +56,7 @@ public class Main {
             visited[nx][ny] = time;
             visit[nx][ny] = true;
             if(res[0] == i) {
-                visited[nx][ny] += 1000;
+                visited[nx][ny] += 2000;
             }
             q.add(new int[]{nx, ny});
         }
@@ -70,14 +70,14 @@ public class Main {
                 int ny = p[1] + dy[i];
                 if (0 <= nx && nx < r+3 && 0 <= ny && ny < c) {
                     if (!visit[nx][ny]) {
-                        if (visited[p[0]][p[1]] == visited[nx][ny] || visited[p[0]][p[1]] + 1000 == visited[nx][ny]) {
+                        if (visited[p[0]][p[1]] == visited[nx][ny] || visited[p[0]][p[1]] + 2000 == visited[nx][ny]) {
                             visit[nx][ny] = true;
                             q.add(new int[]{nx, ny});
                         }
                         // 틀린경우
                         else {
                             // 내가 출구이고, 인근이 0이 아니면
-                            if (visited[p[0]][p[1]] >= 1000 && visited[nx][ny] != 0) {
+                            if (visited[p[0]][p[1]] >= 2000 && visited[nx][ny] != 0) {
                                 visit[nx][ny] = true;
                                 q.add(new int[]{nx, ny});
                             }
