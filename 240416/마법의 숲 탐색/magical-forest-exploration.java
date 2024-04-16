@@ -7,7 +7,6 @@ public class Main {
     static final int[][][] ch = {{{2,0},{1,-1},{1,1}}, {{0,-2},{1,-1},{-1,-1}}, {{0,2},{1,1},{-1,1}}};
 
     static int r, c, k;
-    static int[][] arr;
     static int[][] visited;
     static int ans;
     static int deep;
@@ -19,7 +18,6 @@ public class Main {
         r = Integer.parseInt(st.nextToken());
         c = Integer.parseInt(st.nextToken());
         k = Integer.parseInt(st.nextToken());
-        arr = new int[r + 3][c];
         visited = new int[r + 3][c];
         ans = 0;
 
@@ -33,7 +31,6 @@ public class Main {
             int[] result = shoot(b, 1, a-1);
             // 판갈이 체크 결과:갈아야함
             if (result[1] < 4) {
-                arr = new int[r + 2][c];
                 visited = new int[r+3][c];
             }
 			else {
