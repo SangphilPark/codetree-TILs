@@ -95,7 +95,7 @@ public class Main {
         } 
         // 좌
         if (check(1, x, y)) {
-            return shoot((d-1)%4, x + 1, y - 1);
+            return shoot((4+d-1)%4, x + 1, y - 1);
         }
         // 우
         if (check(2, x, y)) {
